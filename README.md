@@ -24,13 +24,4 @@ Sentinel-2 satellite data, stored in AWS S3 (https://registry.opendata.aws/senti
 
 - **Satellite Data:** Sentinel-2 Cloud-Optimized GeoTIFFs from the European Space Agency (ESA), available through AWS S3.
 
-## Stakeholders
-
 - **Sponsor:** Center for Air Transportation Systems Research @ George Mason University  
-- **Technical Support:** Mike Whitney
-
-## Contact
-
-For more information, please contact:  
-- **Sponsor:** [lsherry@gmu.edu](mailto:lsherry@gmu.edu)  
-- **Technical Support:** [mikeswhitney33@gmail.com](mailto:mikeswhitney33@gmail.com)
