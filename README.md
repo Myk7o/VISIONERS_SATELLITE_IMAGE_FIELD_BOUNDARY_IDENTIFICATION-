@@ -18,7 +18,7 @@ The algorithm must work in all conditions, using the limited available images (1
 
 ## Approach
 
-Sentinel-2 satellite data, stored in AWS S3 (https://registry.opendata.aws/sentinel-2-l2a-cogs/), will be used to classify cropsand analyze crop growth progression. We will explore multiple algorithms and document the advantages and disadvantages of each to meet the project's goals.
+Sentinel-2 satellite data, stored in AWS S3, will be used to classify cropsand analyze crop growth progression. We will explore multiple algorithms and document the advantages and disadvantages of each to meet the project's goals.
 
 ## Dataset
 
