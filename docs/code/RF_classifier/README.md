@@ -62,18 +62,8 @@ The tile data folder structure mimics the Sentinel-2 folder structure and naming
 
 Example: 2022/6/S2A_17TLJ_20220628_0_L2A
 
-## Shapefile and Ground Truth Data
+##Ground Truth Data
 
-The shapefile and ground truth data are sourced from the **CropScape - Cropland Data Layer** project by the **George Mason University Center for Spatial Information Science and Systems**:  
+The ground truth data are sourced from the **CropScape - Cropland Data Layer** project by the **George Mason University Center for Spatial Information Science and Systems**:  
 
 [CropScape - Cropland Data Layer](https://nassgeodata.gmu.edu/CropScape/)
-
-The paths to the data folder, shapefile, and ground truth data are defined in the "Data Paths and Parameters" block. The default paths are as follows:
-
-```python
-data_folder = "/data/2022"
-county_shapefile = "/data/shp_gmu/26063.shp"
-ground_truth_path = os.path.join(data_folder, "cdl_2022.tif")
-```
-
-Adjust these paths as needed based on your local setup.
