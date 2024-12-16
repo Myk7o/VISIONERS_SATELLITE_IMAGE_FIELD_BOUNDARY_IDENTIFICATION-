@@ -52,7 +52,6 @@ The **GMM and SLIC Tests** file provides a comprehensive evaluation of the appro
 
 ### Shapefile and Ground Truth Data
 - Ground truth data is derived from tools like **Meta AI’s Segment Anything** and shapefiles for regions like Huron County (Michigan).
-- Example paths to required data files:
   ```python
   county_boundary = gpd.read_file(county_shapefile).to_crs("EPSG:32617")
     masked_geometries = [geom for geom in county_boundary.geometry]
