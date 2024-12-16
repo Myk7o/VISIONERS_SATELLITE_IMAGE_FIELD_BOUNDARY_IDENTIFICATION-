@@ -60,9 +60,9 @@ Additionally, the Scene Classification Layer (SCL) was used to derive class labe
 
 The tile data folder structure mimics the Sentinel-2 folder structure and naming conventions (Year/month_number/code_for_day_of_shooting). 
 
-Example: 2022/6/S2A_17TLJ_20220628_0_L2A
+Example: 2024/9/S2A_17TLJ_20240915_0_L2A
 
-##Ground Truth Data
+## Ground Truth Data
 
 The ground truth data are sourced from the **CropScape - Cropland Data Layer** project by the **George Mason University Center for Spatial Information Science and Systems**:  
 
