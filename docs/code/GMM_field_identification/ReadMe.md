@@ -1,4 +1,4 @@
-# Field Boundary Identification and Field Acreage Calculation
+# Field Boundary Identification and Field Acreage Calculation Using Gaussian Mixture Model (GMM) and SLIC
 
 This repository applies Gaussian Mixture Models (GMM) and SLIC Superpixel Segmentation to analyze Sentinel-2 satellite imagery. The method identifies agricultural fields by crop type, determines their boundaries, and calculates the number and acreage of these fields. The approach is effective for both large-scale datasets, including TIF files covering entire counties, and single-image analysis.
 
@@ -14,10 +14,12 @@ This repository applies Gaussian Mixture Models (GMM) and SLIC Superpixel Segmen
 1. **GMM Clustering:**
    - Groups pixels based on spectral reflectance values to separate fields by color similarities.
    - The elbow method determines the optimal number of clusters, ensuring minimal computational overhead without compromising accuracy.
+   - **GMM works perfectly with a TIF file covering the entire county,** making it highly scalable for large-scale datasets without altitude specification.
 
 2. **SLIC Superpixel Segmentation:**
    - Refines the clusters created by GMM into compact, uniform regions with distinct boundaries.
    - Assigns unique IDs to superpixels, allowing for easy tracking of fields and monitoring of crop health over time.
+   - **GMM + SLIC code works only with images captured at altitudes of 500 meters or lower,** making it ideal for drone imagery or high-resolution satellite images.
 
 ### Boundary and Acreage Calculation
 - **Polygon Creation:**
@@ -33,6 +35,12 @@ This repository applies Gaussian Mixture Models (GMM) and SLIC Superpixel Segmen
 ### Visualization
 - Field boundary polygons are visualized overlaid on True Color Imagery for confirmation.
 - Comparative visualizations highlight identified boundaries against ground truth data, such as Meta AI’s **Segment Anything** model.
+
+---
+
+## GMM and SLIC Tests
+
+The **GMM and SLIC Tests** file provides a comprehensive evaluation of the approach under different circumstances, including variations in imagery resolution, cropping patterns, and environmental conditions. It helps validate the robustness and scalability of the segmentation methodology.
 
 ---
 
