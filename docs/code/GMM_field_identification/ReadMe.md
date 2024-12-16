@@ -54,6 +54,16 @@ The **GMM and SLIC Tests** file provides a comprehensive evaluation of the appro
 - Ground truth data is derived from tools like **Meta AI’s Segment Anything** and shapefiles for regions like Huron County (Michigan).
 - Example paths to required data files:
   ```python
-  data_folder = "/data/2022"
-  county_shapefile = "/data/shp_gmu/26063.shp"
-  ground_truth_path = os.path.join(data_folder, "cdl_2022.tif")
+  county_boundary = gpd.read_file(county_shapefile).to_crs("EPSG:32617")
+    masked_geometries = [geom for geom in county_boundary.geometry]
+
+    with rasterio.open(tif_file_path) as src:
+        crs = src.crs
+        cropped_image, transform = mask(src, masked_geometries, crop=True)
+
+        # Read bands (assuming band 1=B02, band 2=B03, band 3=B11)
+        B02 = cropped_image[0].astype(np.float32)
+        B03 = cropped_image[1].astype(np.float32)
+        B11 = cropped_image[2].astype(np.float32)
+
+    return B02, B03, B11
