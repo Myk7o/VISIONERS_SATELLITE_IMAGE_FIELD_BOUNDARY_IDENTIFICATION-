@@ -27,6 +27,9 @@ Sentinel-2 satellite data, stored in AWS S3, will be used to classify cropsand a
 - **Sponsor:** Center for Air Transportation Systems Research @ George Mason University
 
 ## How to use:
-- **The project consists of 4 appraoches created for field boundaries identfication. Each approach was saved to the corresponding folder.
-- **Each aprroach may be used separetly.
-- **Each approach has its won ReadMe file with more detailed instruction for each method.
+
+- The project consists of 4 appraoches created for field boundaries identfication. Each approach was saved to the corresponding folder.
+  
+- Each aprroach may be used separetly.
+  
+- Each approach has its won ReadMe file with more detailed instruction for each method.
